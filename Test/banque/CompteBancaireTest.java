@@ -1,4 +1,4 @@
-package Banque;
+package banque;
 
 import Main.banque.CompteBancaire;
 import Main.banque.exceptions.MontantInvalideException;
