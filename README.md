@@ -27,7 +27,7 @@ Les erreurs de programmation (arguments `null`, IBAN vide, découvert négatif) 
 
 Le point le plus délicat est la méthode `virement()` : un virement enchaîne un retrait puis un dépôt. Pour éviter qu'un retrait réussi ne soit "perdu" si le dépôt échoue (ce qui romprait l'équilibre des comptes), le retrait est effectué en premier (il est donc vérifié avant tout effet de bord), et un `try/catch` autour du dépôt permet d'annuler le retrait si jamais un problème survient malgré tout, afin de garantir l'atomicité de l'opération.
 
-les classes ont été écrites en premier (`CompteBancaire`, puis `GestionnaireComptes`), suivies de leurs tests. Ce n'est donc pas du TDD strict (tests écrits avant le code), mais une démarche de **tests après coup**.
+Les classes ont été écrites en premier (`CompteBancaire`, puis `GestionnaireComptes`), suivies de leurs tests. Ce n'est donc pas du TDD strict (tests écrits avant le code), mais une démarche de **tests après coup**.
 
 ## 3. Comment lancer les tests
 
